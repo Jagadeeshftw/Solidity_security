@@ -1,14 +1,13 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.0;
 
-contract Counter {
-    uint256 public number;
+contract ReentrancyAttack {
+    mapping(address => uint) balance;
 
-    function setNumber(uint256 newNumber) public {
-        number = newNumber;
+    function deposit() public payable {
+        require(msg.value > 0, "Min requirement not met");
+        balance[msg.sender] += msg.value;
     }
 
-    function increment() public {
-        number++;
-    }
+    function withdraw() public {}
 }

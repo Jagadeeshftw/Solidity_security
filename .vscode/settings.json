@@ -1,0 +1,5 @@
+{
+    "solidity.compileUsingRemoteVersion": "v0.8.24+commit.9cf6e910",
+    "solidity.defaultCompiler": "remote",
+    "solidity.compileUsingLocalVersion": "/home/jaga/projects/Solidity_security/soljson-v0.8.24+commit.e11b9ed9.js"
+}
